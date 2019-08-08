@@ -1,0 +1,54 @@
+.#{$id} {
+  .#{$id}_Accordion__itemTab {
+    border: 1px solid #000;
+    border-top: 0;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .#{$id}_Accordion__itemBody {
+    display: none;
+    border: 1px solid #000;
+    border-top: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .#{$id}_Accordion__itemBodyInner {
+    padding: 10px;
+  }
+
+  &.#{$id}_Accordion__item--open {
+    .#{$id}_Accordion__itemBody {
+      display: block;
+    }
+  }
+
+  .#{$id}_Accordion__item {
+    &:first-of-type {
+      .#{$id}_Accordion__itemTab {
+        border-top: 1px solid #000;
+      }
+    }
+  }
+
+  .#{$id}_Accordion__nav {
+    padding: 15px 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    max-width: 180px;
+    width: 90%;
+    background: #1b1b1b;
+    color: white;
+    display: inline-block;
+
+    &.#{$id}_Accordion__nav--prev {
+      margin: 0 0 20px 0;
+    }
+
+    &.#{$id}_Accordion__nav--next {
+      margin: 20px 0 0 0;
+    }
+  }
+}
